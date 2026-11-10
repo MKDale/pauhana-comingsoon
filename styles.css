@@ -1,0 +1,133 @@
+:root {
+  --text: #ffffff;
+  --text-soft: rgba(255, 255, 255, 0.92);
+  --icon-size: 1.75rem;
+  --content-max: 42rem;
+  --logo-max: min(72vw, 28rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  color: var(--text);
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+#gradient {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100dvh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.content {
+  width: min(100%, var(--content-max));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  animation: rise-in 900ms ease-out both;
+}
+
+.logo {
+  display: block;
+  width: var(--logo-max);
+  height: auto;
+  max-width: 100%;
+  user-select: none;
+  pointer-events: none;
+}
+
+.tagline {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2.6vw, 1.65rem);
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: none;
+  color: var(--text);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.18);
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--text);
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-2px);
+  opacity: 0.85;
+  outline: none;
+}
+
+.social-link:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+}
+
+.social-link svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: currentColor;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    animation: none;
+  }
+
+  .social-link {
+    transition: none;
+  }
+}
