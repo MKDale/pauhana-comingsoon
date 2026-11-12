@@ -2,12 +2,12 @@
   "use strict";
 
   var PALETTE = [
-    { id: "scoop-yellow", name: "scoop yellow", hex: "#FFB814", text: "#000000", use: "Primary brand color. Large fields and label backgrounds." },
-    { id: "sunrise-orange", name: "sunrise orange", hex: "#FE4B00", text: "#000000", use: "Energy color for splats, stickers and the spiked line." },
+    { id: "scoop-yellow", name: "scoop yellow", hex: "#FFB814", text: "#010B13", use: "Primary brand color. Large fields and label backgrounds." },
+    { id: "sunrise-orange", name: "sunrise orange", hex: "#FE4B00", text: "#010B13", use: "Energy color for splats, stickers and the spiked line." },
     { id: "dark-sea-blue", name: "dark sea blue", hex: "#007B97", text: "#F9FBFC", use: "Grounding color. Works for body text with white." },
-    { id: "coral-blue", name: "coral blue", hex: "#4FE4F9", text: "#000000", use: "Bright aqua accent for highlights and the classic line." },
-    { id: "sea-foam-white", name: "sea foam white", hex: "#F9FBFC", text: "#000000", use: "Page and label background." },
-    { id: "ink", name: "ink", hex: "#000000", text: "#F9FBFC", use: "Wordmark, body text and the one color logo." }
+    { id: "coral-blue", name: "coral blue", hex: "#4FE4F9", text: "#010B13", use: "Bright aqua accent for highlights and the classic line." },
+    { id: "sea-foam-white", name: "sea foam white", hex: "#F9FBFC", text: "#010B13", use: "Page and label background." },
+    { id: "ink", name: "ink", hex: "#010B13", text: "#F9FBFC", use: "Wordmark, body text and the one color logo." }
   ];
 
   /* WCAG contrast */
@@ -83,6 +83,17 @@
       );
     });
     swatchWrap.appendChild(btn);
+  });
+
+  /* Copy CSS from gradient cards */
+  Array.prototype.slice.call(document.querySelectorAll("[data-copy]")).forEach(function (el) {
+    el.addEventListener("click", function () {
+      var v = el.getAttribute("data-copy");
+      copyText(v).then(
+        function () { showToast("Copied gradient CSS"); },
+        function () { showToast("Could not copy. Select the code by hand."); }
+      );
+    });
   });
 
   /* Contrast checker */

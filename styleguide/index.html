@@ -30,7 +30,7 @@
     <!-- Cover -->
     <section class="cover" id="top">
       <div class="cover__text">
-        <p class="eyebrow">Style guide, v1</p>
+        <p class="eyebrow">Style guide, v1.2</p>
         <h1 class="cover__name"><span class="sr-only">Pau Hana Creamery</span><img src="assets/pau-hana-logo-black.png" alt="" width="1600" height="875"></h1>
         <p class="cover__tag">Handcrafted island ice cream, spiked or classic.</p>
         <p class="cover__sub">Based on Oahu. "Pau hana" is the local phrase for the moment work is done and it is time to unwind. Backup line: <em>Unwind by the scoop.</em></p>
@@ -69,8 +69,8 @@
           <figcaption><strong>White on black</strong><span>For ink and dark sea blue only.</span></figcaption>
         </figure>
         <figure class="card">
-          <div class="frame frame--grey"><img class="round" src="assets/pau-hana-social-icon.png" alt="Pau Hana Creamery round social icon, black logo on a yellow to orange gradient" loading="lazy"></div>
-          <figcaption><strong>Social icon</strong><span>Black logo on a yellow to orange gradient. Screens only.</span></figcaption>
+          <div class="frame frame--white"><img src="assets/pau-hana-monogram-black.png" alt="PH monogram in black on white" loading="lazy" style="max-width:62%"></div>
+          <figcaption><strong>PH monogram</strong><span>A compact mark for small spaces. Black on light backgrounds.</span></figcaption>
         </figure>
       </div>
 
@@ -85,7 +85,7 @@
         </div>
         <div class="rule">
           <h3>Backgrounds</h3>
-          <p>Black logo on sea foam white, scoop yellow, coral blue and sunrise orange (6.2 to 1). White logo on ink or dark sea blue. Avoid the white logo on sunrise orange (3.3 to 1), scoop yellow and coral blue.</p>
+          <p>Black logo on sea foam white, scoop yellow, coral blue and sunrise orange (5.9 to 1). White logo on ink, dark sea blue and the two label gradients. Avoid the white logo on flat sunrise orange (3.3 to 1), scoop yellow and coral blue.</p>
         </div>
       </div>
     </section>
@@ -95,26 +95,63 @@
       <header class="section__head">
         <p class="eyebrow">02</p>
         <h2>Color</h2>
-        <p class="lede">Five brand colors plus ink. Lead with scoop yellow and ink. Use sunrise orange, dark sea blue and coral blue as accents. Click a swatch to copy its hex code.</p>
+        <p class="lede">Five brand colors plus ink, and two gradients that mark the flavor line on labels. Lead with scoop yellow and ink. Use sunrise orange, dark sea blue and coral blue as accents. Click a swatch to copy its hex code.</p>
       </header>
 
       <div class="swatches" id="swatches"></div>
+
+      <h3 class="sub">Label gradients</h3>
+      <p class="meta meta--wide">Two diagonal gradients carry the flavor line. Each runs from the top right corner to the lower left, dark to bright. The CSS below is written for a square element, so a round label or icon matches the Figma art. Click a card to copy it.</p>
+      <div class="gradients">
+        <button type="button" class="gradcard" data-copy="linear-gradient(205.3deg, #003440 27.6%, #28B0C8 79.2%, #4FE4F9 110.6%)" aria-label="Copy the classic blue gradient CSS">
+          <span class="gradcard__bar gradcard__bar--classic"></span>
+          <span class="gradcard__body">
+            <span class="gradcard__name">Classic blue</span>
+            <span class="gradcard__stops"><code>#003440</code> <code>#28B0C8</code> <code>#4FE4F9</code></span>
+            <span class="gradcard__use">Classic flavors with no added alcohol. Figma style: Pau Hana Blue Gradient 2.</span>
+          </span>
+        </button>
+        <button type="button" class="gradcard" data-copy="linear-gradient(205.3deg, #4A1101 2.7%, #FE4B00 59.5%, #FFB814 101.5%)" aria-label="Copy the spiked orange gradient CSS">
+          <span class="gradcard__bar gradcard__bar--spiked"></span>
+          <span class="gradcard__body">
+            <span class="gradcard__name">Spiked orange</span>
+            <span class="gradcard__stops"><code>#4A1101</code> <code>#FE4B00</code> <code>#FFB814</code></span>
+            <span class="gradcard__use">Spiked flavors with alcohol. Figma style: Pau Hana Orange Gradient 2.</span>
+          </span>
+        </button>
+      </div>
 
       <h3 class="sub">Contrast pairs</h3>
       <div class="table-wrap">
         <table class="table">
           <thead><tr><th scope="col">Pair</th><th scope="col">Contrast</th><th scope="col">OK for</th></tr></thead>
           <tbody>
-            <tr><td>Ink on scoop yellow</td><td>12.1 to 1</td><td class="ok">All text</td></tr>
-            <tr><td>Ink on coral blue</td><td>13.8 to 1</td><td class="ok">All text</td></tr>
-            <tr><td>Ink on sunrise orange</td><td>6.2 to 1</td><td class="ok">All text</td></tr>
-            <tr><td>Ink on sea foam white</td><td>20.2 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Ink on scoop yellow</td><td>11.4 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Ink on coral blue</td><td>13.0 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Ink on sunrise orange</td><td>5.9 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Ink on sea foam white</td><td>19.1 to 1</td><td class="ok">All text</td></tr>
             <tr><td>Sea foam white on dark sea blue</td><td>4.7 to 1</td><td class="ok">All text</td></tr>
             <tr><td>Dark sea blue on sea foam white</td><td>4.7 to 1</td><td class="ok">All text</td></tr>
             <tr><td>Sea foam white on sunrise orange</td><td>3.3 to 1</td><td class="warn">Large text only (24px and up)</td></tr>
             <tr><td>Scoop yellow on sea foam white</td><td>1.7 to 1</td><td class="no">Never for text</td></tr>
             <tr><td>Coral blue on sea foam white</td><td>1.5 to 1</td><td class="no">Never for text</td></tr>
             <tr><td>Sunrise orange on dark sea blue</td><td>1.4 to 1</td><td class="no">Never adjacent for text</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub">Contrast on the label gradients</h3>
+      <p class="meta meta--wide">Worst case across each text block on the label art, calculated from the gradient stops.</p>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th scope="col">Pair</th><th scope="col">Contrast</th><th scope="col">OK for</th></tr></thead>
+          <tbody>
+            <tr><td>White wordmark on classic blue</td><td>6.8 to 1 or better</td><td class="ok">All text</td></tr>
+            <tr><td>White CREAMERY on classic blue</td><td>6.1 to 1 or better</td><td class="ok">All text</td></tr>
+            <tr><td>Ink statement and MADE line on classic blue</td><td>4.6 to 1 or better</td><td class="ok">All text</td></tr>
+            <tr><td>White wordmark on spiked orange</td><td>4.4 to 1 or better</td><td class="warn">Large type only. The wordmark qualifies.</td></tr>
+            <tr><td>White CREAMERY on spiked orange</td><td>4.1 to 1 or better</td><td class="warn">Borderline. Keep it at least this size and bold.</td></tr>
+            <tr><td>Ink statement and MADE line on spiked orange</td><td>5.6 to 1 or better</td><td class="ok">All text</td></tr>
           </tbody>
         </table>
       </div>
@@ -142,20 +179,34 @@
       <header class="section__head">
         <p class="eyebrow">03</p>
         <h2>Type</h2>
-        <p class="lede">Two free Google Fonts under the SIL Open Font License. Josefin Sans does nearly everything. Oi is for display headings only.</p>
+        <p class="lede">Two free Google Fonts under the SIL Open Font License. Josefin Sans does nearly everything. Oi is the headline font, for display headings only.</p>
       </header>
 
       <div class="grid grid--2">
         <article class="card card--pad">
           <p class="eyebrow">Everything else</p>
           <p class="specimen specimen--sans">Josefin Sans</p>
-          <p class="meta">Weights 400, 500, 600, 700. Capitals with generous spacing (about 0.15 to 0.3em) for CREAMERY and small labels. Normal case for taglines and body copy, with about 0.05em spacing on the tagline.</p>
+          <p class="meta">Weights 400, 500, 600, 700. Labels use Bold and Regular. Tracking is 0.1em everywhere, for capitals and normal case alike.</p>
         </article>
         <article class="card card--pad">
           <p class="eyebrow">Display only</p>
           <p class="specimen specimen--oi">Nutty Moose on the Loose</p>
           <p class="meta">One extra heavy weight. The wordmark is a heavily modified version of Oi, so stock Oi is a cousin of the logo, not a copy of it.</p>
         </article>
+      </div>
+
+      <h3 class="sub">Label type</h3>
+      <p class="meta meta--wide">Sizes are for the 3.5 inch round label, converted from the Figma art (3792 px wide). All caps, Josefin Sans.</p>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th scope="col">Element</th><th scope="col">Weight</th><th scope="col">Size</th><th scope="col">Letter spacing</th><th scope="col">Color</th></tr></thead>
+          <tbody>
+            <tr><td>CREAMERY</td><td>Bold</td><td>10.6pt</td><td>0.1em</td><td>White</td></tr>
+            <tr><td>Classic statement</td><td>Bold</td><td>7pt</td><td>0.1em</td><td>Ink</td></tr>
+            <tr><td>Spiked statement</td><td>Bold</td><td>7pt</td><td>0.1em</td><td>Ink</td></tr>
+            <tr><td>MADE:</td><td>Regular</td><td>7pt</td><td>0.1em</td><td>Ink</td></tr>
+          </tbody>
+        </table>
       </div>
 
       <h3 class="sub">Type scale</h3>
@@ -217,39 +268,75 @@
       <header class="section__head">
         <p class="eyebrow">05</p>
         <h2>Labels and social</h2>
-        <p class="lede">A round pint label has an outer disc, a thin inner ring, the logo, the tagline on two lines and the website. Black and white versions exist.</p>
+        <p class="lede">Each pint gets a 3.5 inch round label. A blue gradient marks a classic flavor and an orange gradient marks a spiked one. A white box stays blank so the flavor can be handwritten after the pint is filled.</p>
       </header>
 
       <div class="grid grid--2">
-        <div class="card card--pad">
-          <h3 class="sub sub--tight">Pint label</h3>
-          <ul class="bullets">
-            <li>The inner ring is a hairline. Set it to at least 0.5pt for print.</li>
-            <li>Check the small, widely spaced website line at actual size.</li>
-            <li>Flat scoop yellow for print. Gradients are for screens.</li>
-          </ul>
+        <figure class="card">
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/label-classic.png" alt="Classic pint label with a blue gradient, white logo, a blank white flavor box, and the text Classic flavor, no added alcohol, above a Made line" loading="lazy"></div>
+          <figcaption><strong>Classic</strong><span>"CLASSIC FLAVOR, NO ADDED ALCOHOL"</span></figcaption>
+        </figure>
+        <figure class="card">
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/label-spiked.png" alt="Spiked pint label with an orange gradient, white logo, a blank white flavor box, and the text Spiked flavor, 4 to 5 percent ABV, 21 plus only, contains alcohol, above a Made line" loading="lazy"></div>
+          <figcaption><strong>Spiked</strong><span>"SPIKED FLAVOR, 4-5% ABV, 21+ ONLY, CONTAINS ALCOHOL"</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="rules rules--labels">
+        <div class="rule">
+          <h3>Size and fit</h3>
+          <p>3.5 inch circle. The pint lid is 3.8 inches across with a 0.4 inch rim, so the label sits on the flat top with about 0.15 inch of margin all around. Do not go larger.</p>
         </div>
-        <div class="card card--pad">
-          <h3 class="sub sub--tight">Social icon</h3>
-          <ul class="bullets">
-            <li>Black logo on a vertical gradient: sea foam white, through scoop yellow, to sunrise orange.</li>
-            <li>Recommendation: start the gradient at scoop yellow. The near white top makes the circle's edge disappear on light app backgrounds.</li>
-            <li>Leave more margin around the left splash, since platforms crop to a circle.</li>
-          </ul>
+        <div class="rule">
+          <h3>Material</h3>
+          <p>Waterproof matte film, full color, with a freezer-rated permanent adhesive. Apply to room-temperature lids, because labels stick poorly once the container is cold. Use permanent marker in the flavor box.</p>
+        </div>
+        <div class="rule">
+          <h3>Layout, top to bottom</h3>
+          <p>Logo, CREAMERY, blank white flavor box, alcohol statement, then a MADE: line. The date is written in by hand, so no space is reserved.</p>
+        </div>
+        <div class="rule">
+          <h3>Text color</h3>
+          <p>The logo and CREAMERY are white. The alcohol statement and MADE: line are ink, so they stay readable on the bright end of each gradient.</p>
+        </div>
+        <div class="rule rule--alert">
+          <h3>Alcohol statement is required</h3>
+          <p>Every label carries its statement in plain words. Color is never the only signal. If a flavor falls outside 4 to 5 percent ABV, change the number.</p>
         </div>
       </div>
 
-      <h3 class="sub">Spiked vs. classic <span class="tag">Recommendation</span></h3>
+      <h3 class="sub">Monochrome labels</h3>
       <div class="grid grid--2">
-        <div class="pint pint--classic">
-          <span class="pint__label">Classic</span>
-          <p>Sea foam white or scoop yellow label, black logo, no age marker.</p>
-        </div>
-        <div class="pint pint--spiked">
-          <span class="pint__label">Spiked <b class="age">21+</b></span>
-          <p>Ink label, white logo, a sunrise orange splat and a visible 21+ mark, so a spiked pint is recognizable from across a freezer case.</p>
-        </div>
+        <figure class="card">
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/label-black.png" alt="Round label with a black field, white logo, the tagline and the website" loading="lazy"></div>
+          <figcaption><strong>Black</strong><span>White logo, tagline and website.</span></figcaption>
+        </figure>
+        <figure class="card">
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/label-white.png" alt="Round label with a white field, black logo, the tagline and the website" loading="lazy"></div>
+          <figcaption><strong>White</strong><span>Black logo, tagline and website.</span></figcaption>
+        </figure>
       </div>
+      <ul class="bullets bullets--wide">
+        <li>These carry the tagline and website. The gradient flavor labels do not.</li>
+        <li>The inner ring is a hairline. Set it to at least 0.5pt for print.</li>
+        <li>Check the small, widely spaced website line at actual size.</li>
+      </ul>
+
+      <h3 class="sub">Social icons</h3>
+      <div class="grid grid--2">
+        <figure class="card">
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/social-icon-classic.png" alt="Round social icon, white logo and CREAMERY on the blue gradient" loading="lazy"></div>
+          <figcaption><strong>Classic</strong><span>White logo on the blue gradient.</span></figcaption>
+        </figure>
+        <figure class="card">
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/social-icon-spiked.png" alt="Round social icon, white logo and CREAMERY on the orange gradient" loading="lazy"></div>
+          <figcaption><strong>Spiked</strong><span>White logo on the orange gradient.</span></figcaption>
+        </figure>
+      </div>
+      <ul class="bullets bullets--wide">
+        <li>Screens only. Match the gradient to the post: blue for classic, orange for spiked.</li>
+        <li>Leave margin around the left splash, since platforms crop to a circle.</li>
+      </ul>
     </section>
 
     <!-- Voice -->
@@ -269,7 +356,7 @@
   </main>
 
   <footer class="footer">
-    <p>Pau Hana Creamery. Style guide v1. Josefin Sans and Oi are Google Fonts under the SIL Open Font License.</p>
+    <p>Pau Hana Creamery. Style guide v1.2, updated November 12, 2026. Josefin Sans and Oi are Google Fonts under the SIL Open Font License.</p>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
