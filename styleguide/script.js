@@ -85,16 +85,11 @@
     swatchWrap.appendChild(btn);
   });
 
-  /* Copy CSS from gradient cards */
-  Array.prototype.slice.call(document.querySelectorAll("[data-copy]")).forEach(function (el) {
-    el.addEventListener("click", function () {
-      var v = el.getAttribute("data-copy");
-      copyText(v).then(
-        function () { showToast("Copied gradient CSS"); },
-        function () { showToast("Could not copy. Select the code by hand."); }
-      );
-    });
+  /* Button demo */
+  Array.prototype.slice.call(document.querySelectorAll("[data-demo]")).forEach(function (el) {
+    el.addEventListener("click", function () { showToast(el.getAttribute("data-demo")); });
   });
+
 
   /* Contrast checker */
   var fg = document.getElementById("fg");

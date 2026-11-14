@@ -21,6 +21,7 @@
       <a href="#color">Color</a>
       <a href="#type">Type</a>
       <a href="#layout">Layout</a>
+      <a href="#buttons">Buttons</a>
       <a href="#labels">Labels</a>
       <a href="#voice">Voice</a>
     </nav>
@@ -30,7 +31,7 @@
     <!-- Cover -->
     <section class="cover" id="top">
       <div class="cover__text">
-        <p class="eyebrow">Style guide, v1.2</p>
+        <p class="eyebrow">Style guide, v1.4</p>
         <h1 class="cover__name"><span class="sr-only">Pau Hana Creamery</span><img src="assets/pau-hana-logo-black.png" alt="" width="1600" height="875"></h1>
         <p class="cover__tag">Handcrafted island ice cream, spiked or classic.</p>
         <p class="cover__sub">Based on Oahu. "Pau hana" is the local phrase for the moment work is done and it is time to unwind. Backup line: <em>Unwind by the scoop.</em></p>
@@ -85,7 +86,7 @@
         </div>
         <div class="rule">
           <h3>Backgrounds</h3>
-          <p>Black logo on sea foam white, scoop yellow, coral blue and sunrise orange (5.9 to 1). White logo on ink, dark sea blue and the two label gradients. Avoid the white logo on flat sunrise orange (3.3 to 1), scoop yellow and coral blue.</p>
+          <p>Black logo on sea foam white, scoop yellow, coral blue and sunrise orange (5.9 to 1). White logo on ink and dark sea blue. Avoid the white logo on flat sunrise orange (3.3 to 1), scoop yellow and coral blue.</p>
         </div>
       </div>
     </section>
@@ -95,31 +96,10 @@
       <header class="section__head">
         <p class="eyebrow">02</p>
         <h2>Color</h2>
-        <p class="lede">Five brand colors plus ink, and two gradients that mark the flavor line on labels. Lead with scoop yellow and ink. Use sunrise orange, dark sea blue and coral blue as accents. Click a swatch to copy its hex code.</p>
+        <p class="lede">Five brand colors plus ink. Lead with scoop yellow and ink. Use sunrise orange, dark sea blue and coral blue as accents. Click a swatch to copy its hex code.</p>
       </header>
 
       <div class="swatches" id="swatches"></div>
-
-      <h3 class="sub">Label gradients</h3>
-      <p class="meta meta--wide">Two diagonal gradients carry the flavor line. Each runs from the top right corner to the lower left, dark to bright. The CSS below is written for a square element, so a round label or icon matches the Figma art. Click a card to copy it.</p>
-      <div class="gradients">
-        <button type="button" class="gradcard" data-copy="linear-gradient(205.3deg, #003440 27.6%, #28B0C8 79.2%, #4FE4F9 110.6%)" aria-label="Copy the classic blue gradient CSS">
-          <span class="gradcard__bar gradcard__bar--classic"></span>
-          <span class="gradcard__body">
-            <span class="gradcard__name">Classic blue</span>
-            <span class="gradcard__stops"><code>#003440</code> <code>#28B0C8</code> <code>#4FE4F9</code></span>
-            <span class="gradcard__use">Classic flavors with no added alcohol. Figma style: Pau Hana Blue Gradient 2.</span>
-          </span>
-        </button>
-        <button type="button" class="gradcard" data-copy="linear-gradient(205.3deg, #4A1101 2.7%, #FE4B00 59.5%, #FFB814 101.5%)" aria-label="Copy the spiked orange gradient CSS">
-          <span class="gradcard__bar gradcard__bar--spiked"></span>
-          <span class="gradcard__body">
-            <span class="gradcard__name">Spiked orange</span>
-            <span class="gradcard__stops"><code>#4A1101</code> <code>#FE4B00</code> <code>#FFB814</code></span>
-            <span class="gradcard__use">Spiked flavors with alcohol. Figma style: Pau Hana Orange Gradient 2.</span>
-          </span>
-        </button>
-      </div>
 
       <h3 class="sub">Contrast pairs</h3>
       <div class="table-wrap">
@@ -140,18 +120,19 @@
         </table>
       </div>
 
-      <h3 class="sub">Contrast on the label gradients</h3>
-      <p class="meta meta--wide">Worst case across each text block on the label art, calculated from the gradient stops.</p>
+      <h3 class="sub">Contrast on the labels and icons</h3>
+      <p class="meta meta--wide">The pint labels and social icons use flat fields, so each pair is a single value.</p>
       <div class="table-wrap">
         <table class="table">
           <thead><tr><th scope="col">Pair</th><th scope="col">Contrast</th><th scope="col">OK for</th></tr></thead>
           <tbody>
-            <tr><td>White wordmark on classic blue</td><td>6.8 to 1 or better</td><td class="ok">All text</td></tr>
-            <tr><td>White CREAMERY on classic blue</td><td>6.1 to 1 or better</td><td class="ok">All text</td></tr>
-            <tr><td>Ink statement and MADE line on classic blue</td><td>4.6 to 1 or better</td><td class="ok">All text</td></tr>
-            <tr><td>White wordmark on spiked orange</td><td>4.4 to 1 or better</td><td class="warn">Large type only. The wordmark qualifies.</td></tr>
-            <tr><td>White CREAMERY on spiked orange</td><td>4.1 to 1 or better</td><td class="warn">Borderline. Keep it at least this size and bold.</td></tr>
-            <tr><td>Ink statement and MADE line on spiked orange</td><td>5.6 to 1 or better</td><td class="ok">All text</td></tr>
+            <tr><td>Ink logo, CREAMERY and statements on scoop yellow (classic)</td><td>11.4 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>White logo and CREAMERY on ink (spiked)</td><td>19.1 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Sea foam white statement and MADE: on ink (spiked)</td><td>19.1 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>White 21+ on the sunrise orange pill</td><td>3.4 to 1</td><td class="warn">Large type only. The 21+ is about 11.6pt bold.</td></tr>
+            <tr><td>Sunrise orange pill against the ink field</td><td>5.9 to 1</td><td class="ok">Clear shape edge</td></tr>
+            <tr><td>Ink logo and CREAMERY on coral blue (classic icon)</td><td>13.0 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Scoop yellow logo and white CREAMERY on ink (spiked icon)</td><td>11.4 to 1 and 19.1 to 1</td><td class="ok">All text</td></tr>
           </tbody>
         </table>
       </div>
@@ -186,7 +167,7 @@
         <article class="card card--pad">
           <p class="eyebrow">Everything else</p>
           <p class="specimen specimen--sans">Josefin Sans</p>
-          <p class="meta">Weights 400, 500, 600, 700. Labels use Bold and Regular. Tracking is 0.1em everywhere, for capitals and normal case alike.</p>
+          <p class="meta">Weights 400, 500, 600, 700. Labels use Bold and Regular. Tracking is 0.1em everywhere, for capitals and normal case alike. The one exception is the CREAMERY wordmark under the logo, which keeps its own wide tracking (0.3em on the artwork). Leave it as drawn.</p>
         </article>
         <article class="card card--pad">
           <p class="eyebrow">Display only</p>
@@ -201,10 +182,11 @@
         <table class="table">
           <thead><tr><th scope="col">Element</th><th scope="col">Weight</th><th scope="col">Size</th><th scope="col">Letter spacing</th><th scope="col">Color</th></tr></thead>
           <tbody>
-            <tr><td>CREAMERY</td><td>Bold</td><td>10.6pt</td><td>0.1em</td><td>White</td></tr>
+            <tr><td>CREAMERY (wordmark exception)</td><td>Bold</td><td>10.6pt</td><td>0.3em, separate from every other style</td><td>Ink on classic, white on spiked</td></tr>
             <tr><td>Classic statement</td><td>Bold</td><td>7pt</td><td>0.1em</td><td>Ink</td></tr>
-            <tr><td>Spiked statement</td><td>Bold</td><td>7pt</td><td>0.1em</td><td>Ink</td></tr>
-            <tr><td>MADE:</td><td>Regular</td><td>7pt</td><td>0.1em</td><td>Ink</td></tr>
+            <tr><td>Spiked statement</td><td>Bold</td><td>7pt</td><td>0.1em</td><td>Sea foam white</td></tr>
+            <tr><td>MADE:</td><td>Regular</td><td>7pt</td><td>0.1em</td><td>Ink on classic, sea foam white on spiked</td></tr>
+            <tr><td>21+ pill</td><td>Bold</td><td>11.6pt</td><td>0.1em</td><td>White on sunrise orange</td></tr>
           </tbody>
         </table>
       </div>
@@ -221,7 +203,7 @@
 
       <h3 class="sub">Try it</h3>
       <div class="tester">
-        <label for="tester-input">Type a flavor name</label>
+        <label for="tester-input">Type a headline</label>
         <input id="tester-input" type="text" value="Tequila Orange Creamsicle" maxlength="48" autocomplete="off">
         <p class="tester__out tester__out--oi" id="tester-oi" aria-label="Preview in Oi">Tequila Orange Creamsicle</p>
         <p class="tester__note" id="tester-note"></p>
@@ -229,7 +211,7 @@
 
       <h3 class="sub">Display type rules (Oi)</h3>
       <div class="rules rules--2">
-        <div class="rule"><h3>Use it for</h3><p>Flavor names and big section titles at 36px or larger, no more than two lines.</p></div>
+        <div class="rule"><h3>Use it for</h3><p>Big headlines at 36px or larger on the website, menus and signage, no more than two lines. Not on pint labels: flavor names there are handwritten.</p></div>
         <div class="rule"><h3>Do not use it for</h3><p>Body text, labels, prices, ingredients, allergen notes and above all the alcohol and 21+ notices. Those stay in Josefin Sans.</p></div>
         <div class="rule"><h3>Never set "Pau Hana" in it</h3><p>Next to the modified wordmark, stock Oi reads as a slightly wrong copy. Always use the logo artwork.</p></div>
         <div class="rule"><h3>One weight only</h3><p>On the web, self-host the font file and never let the browser fake a bolder one. Use it sparingly, or the wordmark stops being special.</p></div>
@@ -263,22 +245,91 @@
       </div>
     </section>
 
-    <!-- Labels -->
-    <section class="section" id="labels">
+    <!-- Buttons -->
+    <section class="section" id="buttons">
       <header class="section__head">
         <p class="eyebrow">05</p>
+        <h2>Buttons</h2>
+        <p class="lede">Three buttons: primary for the one main action, secondary for a supporting action, and cancel for backing out. All three are pill shaped, bold capitals at 0.1em, and at least 48px tall so they are easy to tap.</p>
+      </header>
+
+      <h3 class="sub">States</h3>
+      <p class="meta meta--wide">Every button has default, hover, pressed, disabled and keyboard focus states. The grid forces each state so you can see them side by side. Hover and press the live buttons below to see the real thing.</p>
+      <div class="table-wrap">
+        <div class="btn-grid" role="table" aria-label="Button states">
+          <div class="btn-grid__head" role="row"><span role="columnheader"></span><span role="columnheader">Default</span><span role="columnheader">Hover</span><span role="columnheader">Pressed</span><span role="columnheader">Disabled</span><span role="columnheader">Focus</span></div>
+          <div class="btn-grid__row" role="row"><span class="btn-grid__label" role="rowheader">Primary</span>
+            <span role="cell"><button type="button" class="btn btn--primary">Order</button></span>
+            <span role="cell"><button type="button" class="btn btn--primary is-hover" tabindex="-1">Order</button></span>
+            <span role="cell"><button type="button" class="btn btn--primary is-active" tabindex="-1">Order</button></span>
+            <span role="cell"><button type="button" class="btn btn--primary" disabled>Order</button></span>
+            <span role="cell"><button type="button" class="btn btn--primary is-focus" tabindex="-1">Order</button></span></div>
+          <div class="btn-grid__row" role="row"><span class="btn-grid__label" role="rowheader">Secondary</span>
+            <span role="cell"><button type="button" class="btn btn--secondary">Details</button></span>
+            <span role="cell"><button type="button" class="btn btn--secondary is-hover" tabindex="-1">Details</button></span>
+            <span role="cell"><button type="button" class="btn btn--secondary is-active" tabindex="-1">Details</button></span>
+            <span role="cell"><button type="button" class="btn btn--secondary" disabled>Details</button></span>
+            <span role="cell"><button type="button" class="btn btn--secondary is-focus" tabindex="-1">Details</button></span></div>
+          <div class="btn-grid__row" role="row"><span class="btn-grid__label" role="rowheader">Cancel</span>
+            <span role="cell"><button type="button" class="btn btn--cancel">Cancel</button></span>
+            <span role="cell"><button type="button" class="btn btn--cancel is-hover" tabindex="-1">Cancel</button></span>
+            <span role="cell"><button type="button" class="btn btn--cancel is-active" tabindex="-1">Cancel</button></span>
+            <span role="cell"><button type="button" class="btn btn--cancel" disabled>Cancel</button></span>
+            <span role="cell"><button type="button" class="btn btn--cancel is-focus" tabindex="-1">Cancel</button></span></div>
+        </div>
+      </div>
+
+      <h3 class="sub">Try them</h3>
+      <div class="btn-demo">
+        <button type="button" class="btn btn--primary" data-demo="Primary clicked">Order a pint</button>
+        <button type="button" class="btn btn--secondary" data-demo="Secondary clicked">See flavors</button>
+        <button type="button" class="btn btn--cancel" data-demo="Cancel clicked">Cancel</button>
+        <button type="button" class="btn btn--primary" disabled>Sold out</button>
+      </div>
+
+      <div class="rules">
+        <div class="rule"><h3>Primary</h3><p>Scoop yellow with ink text. One per screen or card. Hover flips it to ink with yellow text. Pressed turns it sunrise orange.</p></div>
+        <div class="rule"><h3>Secondary</h3><p>Ink outline, no fill. Hover fills it coral blue. Pressed fills it dark sea blue with sea foam white text.</p></div>
+        <div class="rule"><h3>Cancel</h3><p>Plain ink text with no outline, the quietest of the three. Hover and pressed add a light ink tint. It is never red; the brand has no red.</p></div>
+        <div class="rule"><h3>Disabled</h3><p>Faded to about 40 percent, no hover, not clickable, with a not-allowed cursor. Say why in nearby text, such as "Sold out", so color is never the only clue.</p></div>
+        <div class="rule"><h3>Focus</h3><p>A 3px dark sea blue ring with a 2px gap on every button, for keyboard users. Never remove it.</p></div>
+        <div class="rule"><h3>Use on light backgrounds</h3><p>These are built for sea foam white and scoop yellow pages. On an ink background, set the label to sea foam white and ask for an inverse version first.</p></div>
+      </div>
+
+      <h3 class="sub">Contrast</h3>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th scope="col">State</th><th scope="col">Pair</th><th scope="col">Contrast</th><th scope="col">OK for</th></tr></thead>
+          <tbody>
+            <tr><td>Primary default</td><td>Ink on scoop yellow</td><td>11.4 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Primary hover</td><td>Scoop yellow on ink</td><td>11.4 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Primary pressed</td><td>Ink on sunrise orange</td><td>5.9 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Secondary default</td><td>Ink on sea foam white</td><td>19.1 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Secondary hover</td><td>Ink on coral blue</td><td>13.0 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Secondary pressed</td><td>Sea foam white on dark sea blue</td><td>4.7 to 1</td><td class="ok">All text</td></tr>
+            <tr><td>Cancel</td><td>Ink on sea foam white, with a light ink tint</td><td>16 to 1 or better</td><td class="ok">All text</td></tr>
+            <tr><td>Disabled</td><td>Ink at 40 percent</td><td>Below 4.5 to 1</td><td class="warn">Inactive controls are exempt; explain in text</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Labels -->
+    <section class="section section--tint" id="labels">
+      <header class="section__head">
+        <p class="eyebrow">06</p>
         <h2>Labels and social</h2>
-        <p class="lede">Each pint gets a 3.5 inch round label. A blue gradient marks a classic flavor and an orange gradient marks a spiked one. A white box stays blank so the flavor can be handwritten after the pint is filled.</p>
+        <p class="lede">Each pint gets a 3.5 inch round label. A flat scoop yellow field marks a classic flavor and a flat ink field marks a spiked one, so a spiked pint stands out in the freezer case. The white box stays blank on purpose. Whoever makes the batch in the commercial kitchen handwrites the flavor name in it when the ice cream is made, so the label works for any flavor while recipes are still experimental. Pre-printed flavor names can come later, once the menu settles.</p>
       </header>
 
       <div class="grid grid--2">
         <figure class="card">
-          <div class="frame frame--grey frame--square"><img class="round" src="assets/label-classic.png" alt="Classic pint label with a blue gradient, white logo, a blank white flavor box, and the text Classic flavor, no added alcohol, above a Made line" loading="lazy"></div>
-          <figcaption><strong>Classic</strong><span>"CLASSIC FLAVOR, NO ADDED ALCOHOL"</span></figcaption>
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/label-classic.png" alt="Classic pint label on scoop yellow with an ink logo, a blank white flavor box, and the text Classic flavor, no added alcohol, above a Made line" loading="lazy"></div>
+          <figcaption><strong>Classic</strong><span>Scoop yellow field. "CLASSIC FLAVOR, NO ADDED ALCOHOL"</span></figcaption>
         </figure>
         <figure class="card">
-          <div class="frame frame--grey frame--square"><img class="round" src="assets/label-spiked.png" alt="Spiked pint label with an orange gradient, white logo, a blank white flavor box, and the text Spiked flavor, 4 to 5 percent ABV, 21 plus only, contains alcohol, above a Made line" loading="lazy"></div>
-          <figcaption><strong>Spiked</strong><span>"SPIKED FLAVOR, 4-5% ABV, 21+ ONLY, CONTAINS ALCOHOL"</span></figcaption>
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/label-spiked.png" alt="Spiked pint label on ink with a white logo, an orange 21 plus pill, a blank white flavor box, the text Spiked flavor, 4 to 5 percent ABV, 21 plus only, contains alcohol, and a Made line with a small white date box" loading="lazy"></div>
+          <figcaption><strong>Spiked</strong><span>Ink field, orange 21+ pill. "SPIKED FLAVOR, 4-5% ABV, 21+ ONLY, CONTAINS ALCOHOL"</span></figcaption>
         </figure>
       </div>
 
@@ -289,15 +340,15 @@
         </div>
         <div class="rule">
           <h3>Material</h3>
-          <p>Waterproof matte film, full color, with a freezer-rated permanent adhesive. Apply to room-temperature lids, because labels stick poorly once the container is cold. Use permanent marker in the flavor box.</p>
+          <p>Waterproof matte film, full color, with a freezer-rated permanent adhesive. Apply to room-temperature lids, because labels stick poorly once the container is cold. Use permanent marker in the flavor box and the date box.</p>
         </div>
         <div class="rule">
           <h3>Layout, top to bottom</h3>
-          <p>Logo, CREAMERY, blank white flavor box, alcohol statement, then a MADE: line. The date is written in by hand, so no space is reserved.</p>
+          <p>Logo, CREAMERY, blank white flavor box (the flavor name is handwritten here, never printed in Oi), alcohol statement, then a MADE: line. The classic label leaves the date to be written on the yellow. The spiked label adds a small white box under MADE: for it, and an orange 21+ pill on the corner of the flavor box.</p>
         </div>
         <div class="rule">
           <h3>Text color</h3>
-          <p>The logo and CREAMERY are white. The alcohol statement and MADE: line are ink, so they stay readable on the bright end of each gradient.</p>
+          <p>Classic: ink logo, CREAMERY, statement and MADE: line on scoop yellow. Spiked: white logo and CREAMERY, sea foam white statement and MADE: line on ink. The 21+ is white on sunrise orange.</p>
         </div>
         <div class="rule rule--alert">
           <h3>Alcohol statement is required</h3>
@@ -305,7 +356,7 @@
         </div>
       </div>
 
-      <h3 class="sub">Monochrome labels</h3>
+      <h3 class="sub">Monochrome stickers</h3>
       <div class="grid grid--2">
         <figure class="card">
           <div class="frame frame--grey frame--square"><img class="round" src="assets/label-black.png" alt="Round label with a black field, white logo, the tagline and the website" loading="lazy"></div>
@@ -317,7 +368,7 @@
         </figure>
       </div>
       <ul class="bullets bullets--wide">
-        <li>These carry the tagline and website. The gradient flavor labels do not.</li>
+        <li>These carry the tagline and website. The color pint labels do not.</li>
         <li>The inner ring is a hairline. Set it to at least 0.5pt for print.</li>
         <li>Check the small, widely spaced website line at actual size.</li>
       </ul>
@@ -325,24 +376,24 @@
       <h3 class="sub">Social icons</h3>
       <div class="grid grid--2">
         <figure class="card">
-          <div class="frame frame--grey frame--square"><img class="round" src="assets/social-icon-classic.png" alt="Round social icon, white logo and CREAMERY on the blue gradient" loading="lazy"></div>
-          <figcaption><strong>Classic</strong><span>White logo on the blue gradient.</span></figcaption>
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/social-icon-classic.png" alt="Round social icon, ink logo and CREAMERY on coral blue" loading="lazy"></div>
+          <figcaption><strong>Classic</strong><span>Ink logo and CREAMERY on coral blue.</span></figcaption>
         </figure>
         <figure class="card">
-          <div class="frame frame--grey frame--square"><img class="round" src="assets/social-icon-spiked.png" alt="Round social icon, white logo and CREAMERY on the orange gradient" loading="lazy"></div>
-          <figcaption><strong>Spiked</strong><span>White logo on the orange gradient.</span></figcaption>
+          <div class="frame frame--grey frame--square"><img class="round" src="assets/social-icon-spiked.png" alt="Round social icon, scoop yellow logo and white CREAMERY on ink" loading="lazy"></div>
+          <figcaption><strong>Spiked</strong><span>Scoop yellow logo and white CREAMERY on ink.</span></figcaption>
         </figure>
       </div>
       <ul class="bullets bullets--wide">
-        <li>Screens only. Match the gradient to the post: blue for classic, orange for spiked.</li>
+        <li>Screens only. Match the icon to the post: coral blue for classic, ink for spiked.</li>
         <li>Leave margin around the left splash, since platforms crop to a circle.</li>
       </ul>
     </section>
 
     <!-- Voice -->
-    <section class="section section--tint" id="voice">
+    <section class="section" id="voice">
       <header class="section__head">
-        <p class="eyebrow">06</p>
+        <p class="eyebrow">07</p>
         <h2>Voice</h2>
       </header>
       <div class="rules rules--2">
@@ -356,7 +407,7 @@
   </main>
 
   <footer class="footer">
-    <p>Pau Hana Creamery. Style guide v1.2, updated November 12, 2026. Josefin Sans and Oi are Google Fonts under the SIL Open Font License.</p>
+    <p>Pau Hana Creamery. Style guide v1.4, updated November 14, 2026. Josefin Sans and Oi are Google Fonts under the SIL Open Font License.</p>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
